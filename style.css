@@ -1,125 +1,87 @@
-:root {
-    --cor-de-fundo: #47bdb7;
-    --verde: #02bceb;
-    --branco: #FFFFFF;
-    --botao-ativo: #3A375E;
-    --botao-inativo: #3a375e80;
-    --texto-fundo: #3a375e4d;
+/* Estilos para dispositivos menores */
+.corpo {
+    background-color: cadetblue;
 }
 
-body {
-    background-color: var(--cor-de-fundo);
-    color: var(--branco);
-   
+.cabecalho {
+    background-color: rgb(40, 109, 87);
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
 }
 
-.conteudo-principal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
+.titulo {
+    color: rgb(7, 60, 73);
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
 }
 
-.titulo-principal {
-    text-align: left;
-    width: 100%;
+.lista {
+    list-style: none;
+    padding: 0;
+}
+
+.paginas {
+    display: inline;
+    margin: 0 10px;
+}
+
+.item {
+    color: #7ddccb;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.titulo2 {
+    color: rgb(7, 60, 73);
+    font-size: 35px;
+    border: dashed rgb(40, 109, 87);
+}
+
+.paragrafo {
+    font-size: 28px;
+}
+
+.imagem {
+    padding: 0 10px;
+    width: 60%;
+}
+
+.subtitulo {
+    color: rgb(11, 90, 110);
     font-size: 32px;
-
 }
 
-.titulo-principal span {
-    color: var(--verde);
+.item-lista {
+    list-style-type: decimal;
+    font-size: 28px;
+    color: rgb(11, 90, 110);
 }
 
-.botao{
-    font-family: "Crakra Petch", sans-serif;
-    background-color: var(--botao-inativo);
-    color: var(--branco);
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    font-size: 18px;
-    align-items: center;
-    width: 100%;
-   
-    border-bottom: 4px solid var(--botao-ativo);
-    border-left: 2px solid var(--botao-ativo);
-    border-right: 2px solid var(--botao-ativo);
-    border-top: none;
+.item-texto {
+    color: black;
+    list-style-type: circle white;
+    font-size: 24px;
 }
 
-.botoes{
-    display: block;
-}
-
-.botao.ativo{
-    background-color: var(--botao-ativo);
-    border-bottom: 4px solid var(--verde);
-}
-
-
-    @media screen and (min-width: 768px) {
-        .botoes {
-            display: flex;
-        }
-
-        .botao:first-child {
-            border-radius: 40px 0 0 0;
-        }
-
-        .botao:last-child {
-                border-radius: 0 40px 0 0;
-                background-color: var(--texto-fundo);
-                padding: 40px;
-                border-radius: 0 0 40px 40px;
-            }
-        }
-            
-        .abas-textos{
-            background-color: var(--texto-fundo);
-            padding: 40px;
-            border-radius: 0 0 40px 40px;
-        }
-        .aba-conteudo.ativo{
-            display:block;
-        }
-            
-            .aba-conteudo{
-                display: none;
-            }
-            
-            .aba-conteudo-titulo-principal{
-                font-size: 28px;
-                text-align: center;
-            }
-            .aba-conteudo-titulo-secundario{
-                text-align: center;
-                color: var(--verde);
-                text-transform: uppercase;
-            }
-    
-    .contador-digito{
-        padding: 0 16px;
-        text-align: center;
-        min-width: 100px;
-    }
-    
-    .contador-digito-numero{
-        font-size: 80px;
-        margin: 0;
-    }
-    
-    .contador-digito-texto{
-        color: var(--verde);
-        font-size: 20px;
-        margin: 0;
+/* Estilos para dispositivos maiores (exemplo de media query) */
+@media screen and (min-width: 425px) {
+    .corpo {
+        background-color: cadetblue;
     }
 
-    .contador{
-        display:flex;
-        justify-content: center;
-        flex-wrap: wrap;
+    .titulo {
+        color: rgb(7, 60, 73);
+        font-size: 50px;
     }
+
+    .titulo2 {
+        color: white; /* Corrigido para .titulo2 */
+    }
+
+    .paginas {
+        color: rgb(209, 214, 209);
+        font-size: 15px;
+    }
+}
